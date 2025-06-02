@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Zalwa </title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        
+        :root {
+            --soft-blue: #b3b9bc; 
+            --broken-white: #f3cfe2; 
+            --dark-text: #333;
+            --light-text: #666;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--broken-white);
+            color: var(--dark-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: var(--soft-blue);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 600;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.1em;
+            font-weight: 300;
+        }
+
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: -30px; 
+            border-radius: 8px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-pic-container {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid var(--soft-blue);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .profile-pic-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .profile-section h2 {
+            color: var(--soft-blue);
+            margin-top: 10px;
+            font-size: 2em;
+        }
+
+        .profile-section p {
+            max-width: 700px;
+            color: var(--light-text);
+        }
+
+        section {
+            background-color: white;
+            padding: 30px 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        section h3 {
+            color: var(--soft-blue);
+            border-bottom: 2px solid var(--soft-blue);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .list-item {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .list-item::before {
+            content: '•';
+            color: var(--soft-blue);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .list-item strong {
+            color: var(--dark-text);
+        }
+
+        .project-item {
+            background-color: var(--broken-white);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-item h4 {
+            color: var(--soft-blue);
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        .project-item p {
+            margin-bottom: 5px;
+            color: var(--light-text);
+        }
+
+        .project-item ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .project-item ul li {
+            background-color: var(--soft-blue);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+            color: var(--light-text);
+        }
+
+        .contact-info a {
+            color: var(--soft-blue);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background-color: var(--soft-blue);
+            color: white;
+            border-radius: 8px 8px 0 0;
+        }
+
+        @media (max-width: 768px) {
+            .profile-section {
+                padding: 30px 15px;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            .profile-pic-container {
+                width: 150px;
+                height: 150px;
+            }
+            section {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Zalwa Nur Adzani</h1>
+            <p>Mahasiswa Sistem Informasi</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="profile-section">
+            <div class="profile-pic-container">
+                <img src="zalwaprofile.jpeg" alt="Foto Zalwa">
+                </div>
+            <h2>Halo! Saya Zalwa</h2>
+            <p>
+                Saya adalah seorang mahasiswa Sistem Informasi yang memiliki minat dan kemampuan dalam pengembangan sistem informasi, analisis data, dan desain antarmuka pengguna. Saya memiliki pengalaman dalam mengembangkan aplikasi mobile dan sistem informasi manajemen menggunakan berbagai teknologi seperti Java, Python, dan PHP. Saya juga memiliki kemampuan dalam analisis data dan visualisasi data menggunakan teknik statistik dan alat-alat visualisasi data. Saya siap untuk memulai karir sebagai profesional di bidang Sistem Informasi dan berkontribusi pada tim yang dinamis.
+            </p>
+        </section>
+
+        <section id="personal-data">
+            <h3>Data Pribadi</h3>
+            <div class="list-item"><strong>Nama:</strong> Zalwa Nur Adzani</div>
+            <div class="list-item"><strong>Tempat, tanggal lahir:</strong> Medan, 24 Desember 2005</div>
+            <div class="list-item"><strong>Alamat:</strong> Marindal 1, Jalan Setia</div>
+            <div class="list-item"><strong>Jenis Kelamin:</strong> Perempuan</div>
+            <div class="list-item"><strong>Kewarganegaraan:</strong> Indonesia</div>
+        </section>
+
+        <section id="education">
+            <h3>Pendidikan</h3>
+            <div class="list-item">
+                <strong>Universitas Muhammadiyah Sumatera Utara</strong><br>
+                Jurusan Sistem Informasi<br>
+                (2023-sekarang)
+            </div>
+            <div class="list-item">
+                <strong>SMAN 1 Delitua</strong><br>
+                IPA (Ilmu Pengetahuan Alam)<br>
+                (2020-2023)
+            </div>
+        </section>
+
+        <section id="skills">
+            <h3>Keahlian/Skill</h3>
+            <h4>Hard Skill:</h4>
+            <div class="list-item">Java, Python, JavaScript, PHP</div>
+            <div class="list-item">MySQL, Oracle</div>
+            <h4>Soft Skill:</h4>
+            <div class="list-item">Mampu berkolaborasi secara efektif dalam tim.</div>
+            <div class="list-item">Mampu menghasilkan ide-ide baru dalam desain dan solusi.</div>
+            <div class="list-item">Cepat beradaptasi dengan teknologi dan lingkungan baru.</div>
+            <div class="list-item">Berpikir sistematis dan terorganisir.</div>
+        </section>
+
+        <section id="projects">
+            <h3>Pengalaman Proyek</h3>
+            <div class="project-item">
+                <h4>Sistem Informasi Akademik</h4>
+                <p><strong>Tahun:</strong> Sept 2024 - Des 2024</p>
+                <p><strong>Deskripsi:</strong> Mengembangkan sistem informasi akademik untuk mengelola data mahasiswa, dosen, dan mata kuliah. Sistem ini dirancang untuk memudahkan proses administrasi akademik dan meningkatkan efisiensi dalam pengelolaan data.</p>
+                <p><strong>Peran:</strong> Pengembang aplikasi</p>
+                <p><strong>Tantangan:</strong> Mengintegrasikan sistem dengan database yang sudah ada dan memastikan keamanan data.</p>
+                <p><strong>Hasil:</strong> Sistem informasi akademik yang efektif dan efisien dalam mengelola data mahasiswa, dosen, dan mata kuliah.</p>
+                <p><strong>Teknologi:</strong></p>
+                <ul>
+                    <li>PHP</li>
+                    <li>MySQL</li>
+                    <li>CodeIgniter</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h3>Kontak</h3>
+            <div class="contact-info">
+                <p><strong>Telepon:</strong> 081536217840</p>
+                <p><strong>Email:</strong> <a href="mailto:zalwaadzani@gmail.com">zalwaadzani@gmail.com</a></p>
+                <p><strong>Instagram:</strong><a href="https://www.instagram.com/_zzalwaa" target="_blank"><i class="fab fa-instagram"></i> @_zzalwaa</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Zalwa Nur Adzani. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
